@@ -5,14 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First GitHub Page</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 50px; 
+            margin: 0;
+        }
+        nav {
+            background-color: #0366d6;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
         h1 { color: #0366d6; }
     </style>
 </head>
 <body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+    </nav>
+
     <h1>Hello World! 🚀</h1>
     <p>This is my first website hosted on GitHub Pages.</p>
     <p>Made by <strong>nash7772026</strong></p>
+    
     <hr>
     <p>Current Date: <span id="date"></span></p>
 
