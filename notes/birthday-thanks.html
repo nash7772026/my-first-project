@@ -3,58 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Special Birthday Giveaway! 🎉</title>
+    <title>Thank You for the Birthday Wishes! 🎉</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
             color: #333;
+            margin: 0;
         }
-        h1 { font-size: 2.8em; color: #e74c3c; }
-        .prank {
-            font-size: 1.4em;
-            margin: 30px auto;
+        .container {
             max-width: 700px;
+            margin: 40px auto;
             background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
-        .reveal {
-            color: #27ae60;
-            font-size: 2em;
-            margin: 40px 0;
+        h1 { font-size: 2.5em; color: #2e2e2e; }
+        .big-text {
+            font-size: 1.9em;
+            color: #e74c3c;
+            margin: 20px 0;
         }
         button {
-            padding: 15px 30px;
-            font-size: 1.2em;
+            padding: 18px 40px;
+            font-size: 1.4em;
             background: #e74c3c;
             color: white;
             border: none;
             border-radius: 50px;
             cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #c0392b;
+        }
+        .reveal {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <h1>🎉 😂 GOT YOU!! 🎂</h1>
-    
-    <div class="prank">
+    <div class="container" id="prank">
+        <h1>🎉 Thank You Everyone! 🎂</h1>
+        
         <p style="font-size: 1.6em;">Thank you all so much for the warm birthday wishes yesterday!</p>
-        <p style="font-size: 1.8em; color: #e74c3c;"> 
+        
+        <p class="big-text"><strong>I'm feeling very generous today...</strong></p>
+        
+        <h2>🚨 First 5 people to click will get a FREE LAPTOP! 🖥️</h2>
+        <p>Click fast before they run out 👇</p>
+        
+        <button onclick="revealPrank()">Claim My Free Laptop Now!</button>
     </div>
 
-    <div id="reveal" class="reveal" style="display: none;">
-        <h1>Did you just click a spam link? 😈</h1>
-        <p style="font-size: 1.5em;">No free laptops... but thank you again for all the love and wishes ❤️</p>
-        <p>— Iska Nyunja</p>
+    <div class="container reveal" id="reveal">
+        <h1 style="color: #e74c3c; font-size: 2.8em;">😂 Did you just click a spam link? 😈</h1>
+        <p style="font-size: 1.6em;">No free laptops... but thank you again for all the love and wishes ❤️</p>
+        <p>You guys are the best colleagues ever!</p>
+        <p><strong>— Iska Nyunja</strong></p>
     </div>
 
     <script>
         function revealPrank() {
-            document.querySelector('.prank').style.display = 'none';
+            document.getElementById('prank').style.display = 'none';
             document.getElementById('reveal').style.display = 'block';
         }
     </script>
